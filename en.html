@@ -16,52 +16,49 @@
         
         body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; scroll-behavior: smooth; }
 
-        header { background-color: rgba(11, 17, 32, 0.95); padding: 15px 50px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #334155; position: sticky; top: 0; z-index: 100; }
+        header { background-color: rgba(11, 17, 32, 0.95); padding: 15px 50px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #334155; position: sticky; top: 0; z-index: 1000; }
         .logo img { height: 65px; width: auto; background-color: transparent; display: block; filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.2)); }
-        nav a { color: var(--text-main); text-decoration: none; margin-left: 30px; font-size: 1rem; transition: color 0.3s; }
+        nav a { color: var(--text-main); text-decoration: none; margin-left: 30px; font-size: 1rem; transition: color 0.3s; cursor: pointer; }
         nav a:hover { color: var(--accent-primary); }
         .lang-switch { border: 1px solid var(--accent-primary); padding: 5px 12px; border-radius: 20px; color: var(--accent-primary) !important; font-weight: bold; }
-        .lang-switch:hover { background-color: var(--accent-primary); color: #0b1120 !important; }
 
         .hero { padding: 120px 50px; text-align: center; background: radial-gradient(circle at center, #1e293b 0%, #0b1120 100%); border-bottom: 1px solid #334155; }
         .hero h1 { font-size: 2.8rem; margin-bottom: 20px; color: #ffffff; }
-        .hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 850px; margin: 0 auto 40px auto; }
 
         .section-container { padding: 80px 50px; max-width: 1200px; margin: 0 auto; }
         .section-title { text-align: center; font-size: 2.2rem; margin-bottom: 50px; color: var(--accent-primary); }
 
         .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .card { background-color: var(--bg-card); padding: 30px; border-radius: 10px; border-top: 3px solid var(--accent-primary); transition: transform 0.3s; }
-        .card:hover { transform: translateY(-5px); }
-        .card h3 { font-size: 1.4rem; margin-top: 0; color: #fff; }
+        .card { background-color: var(--bg-card); padding: 30px; border-radius: 10px; border-top: 3px solid var(--accent-primary); }
 
+        /* Portfolio (Gallery) */
         .filter-btns { text-align: center; margin-bottom: 40px; }
-        .filter-btn { background: transparent; border: 1px solid var(--accent-primary); color: var(--accent-primary); padding: 10px 20px; margin: 5px; border-radius: 30px; cursor: pointer; font-size: 1rem; transition: 0.3s; }
-        .filter-btn:hover, .filter-btn.active { background: var(--accent-primary); color: #000; font-weight: bold; }
+        .filter-btn { background: transparent; border: 1px solid var(--accent-primary); color: var(--accent-primary); padding: 10px 25px; margin: 8px; border-radius: 30px; cursor: pointer; font-size: 1rem; transition: all 0.3s; }
+        .filter-btn.active { background: var(--accent-primary); color: #0b1120; font-weight: bold; }
         
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 25px; margin-bottom: 30px; }
-        .gallery-item { background-color: var(--bg-card); border-radius: 10px; overflow: hidden; border: 1px solid #334155; transition: all 0.4s ease; display: block; }
-        .gallery-item.hide { display: none !important; } 
-        .gallery-item img { width: 100%; height: 250px; object-fit: cover; transition: transform 0.5s; display: block; }
-        .gallery-item:hover img { transform: scale(1.05); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 25px; }
+        .gallery-item { background-color: var(--bg-card); border-radius: 10px; overflow: hidden; border: 1px solid #334155; display: block; }
+        .gallery-item.hide { display: none; } 
+        .gallery-item img { width: 100%; height: 250px; object-fit: cover; display: block; }
         .gallery-caption { padding: 15px; text-align: center; font-size: 1.05rem; color: #fff; border-top: 2px solid var(--accent-secondary); }
-
         .gallery-item.full-width { grid-column: 1 / -1; }
-        .gallery-item.full-width img { height: auto; object-fit: contain; }
+        .gallery-item.full-width img { height: auto; }
 
+        /* Track Record */
         .achievement-list { list-style: none; padding: 0; }
-        .achievement-list li { background-color: var(--bg-card); margin-bottom: 15px; padding: 20px 30px; border-left: 4px solid var(--accent-secondary); border-radius: 0 5px 5px 0; display: flex; align-items: center; }
-        .achievement-year { font-weight: bold; color: var(--accent-secondary); margin-right: 30px; font-size: 1.1rem; min-width: 140px; flex-shrink: 0; }
+        .achievement-list li { background-color: var(--bg-card); margin-bottom: 15px; padding: 20px 30px; border-left: 4px solid var(--accent-secondary); display: flex; align-items: center; }
+        .achievement-year { font-weight: bold; color: var(--accent-secondary); margin-right: 30px; font-size: 1.1rem; min-width: 140px; }
 
-        .contact-box { background-color: var(--bg-card); padding: 40px; border-radius: 10px; text-align: center; border: 1px solid #334155; }
+        /* Contact Us */
+        .contact-box { background-color: var(--bg-card); padding: 60px 40px; border-radius: 10px; text-align: center; border: 1px solid #334155; margin-top: 20px; }
+        .contact-box p { font-size: 1.2rem; margin: 15px 0; color: #ffffff; }
         .contact-box a { color: var(--accent-primary); text-decoration: none; font-weight: bold; }
-        footer { background-color: #020617; text-align: center; padding: 30px; color: var(--text-muted); border-top: 1px solid #334155; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo"><img src="images/HyicLogo4.png" alt="HsinYang New Logo"></div>
+        <div class="logo"><img src="images/HyicLogo4.png" alt="HsinYang Intelligent"></div>
         <nav>
             <a href="#about">About</a>
             <a href="#expertise">Core Tech</a>
@@ -80,18 +77,9 @@
     <section id="expertise" class="section-container">
         <h2 class="section-title">Core Technologies & Services</h2>
         <div class="grid-3">
-            <div class="card">
-                <h3>Semiconductor Process Equipment</h3>
-                <p>Specializing in electrical control and software for high-end equipment. Covering semiconductor heating and wet process equipment.</p>
-            </div>
-            <div class="card" style="border-top-color: var(--accent-secondary);">
-                <h3>Complete Factory Robot Systems</h3>
-                <p>Expertise in major robot brands. Offering one-stop automation from 3D simulation to commissioning.</p>
-            </div>
-            <div class="card">
-                <h3>Patented & Custom Equipment</h3>
-                <p>Holding multiple multinational patents with independent R&D capabilities for specialized processes.</p>
-            </div>
+            <div class="card"><h3>Semiconductor Process Equipment</h3><p>Specializing in electrical control and software for high-end equipment. Covering semiconductor heating and wet process equipment.</p></div>
+            <div class="card" style="border-top-color: var(--accent-secondary);"><h3>Complete Factory Robot Systems</h3><p>Expertise in major robot brands. Offering one-stop automation from 3D simulation to commissioning.</p></div>
+            <div class="card"><h3>Patented & Custom Equipment</h3><p>Holding multiple multinational patents with independent R&D capabilities for specialized processes.</p></div>
         </div>
     </section>
 
@@ -104,15 +92,16 @@
             <button class="filter-btn" data-filter="sys">Systems & Patents</button>
         </div>
         <div class="gallery-grid">
-            <div class="gallery-item metal"><img src="images/auto-welding.png" alt="Auto Welding"><div class="gallery-caption">Collaborative Automated Welding for Auto Body Lines</div></div>
-            <div class="gallery-item metal"><img src="images/metal-deburring.png" alt="Deburring"><div class="gallery-caption">High-precision Dual-arm Deburring for Aluminum Die Castings</div></div>
-            <div class="gallery-item metal"><img src="images/metal-polishing.jpg" alt="Metal Polishing"><div class="gallery-caption">Complex Surface Polishing for High-gloss Stainless Steel</div></div>
-            <div class="gallery-item metal"><img src="images/waterjet-robot.jpg" alt="Waterjet Handling"><div class="gallery-caption">Automated Waterjet Cutting & Handling for Large Plates</div></div>
-            <div class="gallery-item pack"><img src="images/pack-drinks.png" alt="Case Packing"><div class="gallery-caption">Food-grade High-speed Case Packing for Cup Drinks</div></div>
-            <div class="gallery-item sys"><img src="images/system-punch-press.jpg" alt="Punch Press"><div class="gallery-caption">Patent: High-speed Punch Press Automated Receiving Equipment</div></div>
-            <div class="gallery-item sys"><img src="images/system-glazing.jpg" alt="Glazing Robot"><div class="gallery-caption">Precision Glazing Automation for International Brands</div></div>
-            <div class="gallery-item sys"><img src="images/system-Rivetless-Joining-A.png" alt="Rivetless Line"><div class="gallery-caption">Smart Factory: Rivetless Joining Machine Shell Line A</div></div>
-            <div class="gallery-item full-width sys"><img src="images/system-agv-line.png" alt="AGV Integration"><div class="gallery-caption">Smart Factory: Rivetless Joining & AGV Line Integration</div></div>
+            <div class="gallery-item metal"><img src="images/auto-welding.png"><div class="gallery-caption">Collaborative Automated Welding for Auto Body Lines</div></div>
+            <div class="gallery-item metal"><img src="images/metal-deburring.png"><div class="gallery-caption">High-precision Dual-arm Deburring for Aluminum Die Castings</div></div>
+            <div class="gallery-item metal"><img src="images/metal-polishing.jpg"><div class="gallery-caption">Complex Surface Polishing for High-gloss Stainless Steel</div></div>
+            <div class="gallery-item metal"><img src="images/waterjet-robot.jpg"><div class="gallery-caption">Automated Waterjet Cutting & Handling for Large Plates</div></div>
+            <div class="gallery-item pack"><img src="images/palletizing-box.jpg"><div class="gallery-caption">Fully Automated Carton Array Palletizing System</div></div>
+            <div class="gallery-item pack"><img src="images/pack-drinks.png"><div class="gallery-caption">Food-grade High-speed Case Packing for Cup Drinks</div></div>
+            <div class="gallery-item sys"><img src="images/system-punch-press.jpg"><div class="gallery-caption">Patent: High-speed Punch Press Automated Receiving Equipment</div></div>
+            <div class="gallery-item sys"><img src="images/system-glazing.jpg"><div class="gallery-caption">Precision Glazing Automation for International Brands</div></div>
+            <div class="gallery-item sys"><img src="images/system-Rivetless-Joining-A.png"><div class="gallery-caption">Smart Factory: Rivetless Joining Machine Shell Line A</div></div>
+            <div class="gallery-item sys full-width"><img src="images/system-agv-line.png"><div class="gallery-caption">Smart Factory: Rivetless Joining & AGV Line Integration</div></div>
         </div>
     </section>
 
@@ -137,24 +126,26 @@
         </div>
     </section>
 
-    <footer>
+    <footer style="text-align: center; padding: 40px; color: #94a3b8; border-top: 1px solid #334155;">
         <p>© 2026 HsinYang Intelligent Limited Company. All rights reserved.</p>
     </footer>
 
     <script>
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const galleryItems = document.querySelectorAll('.gallery-item');
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-                const filterValue = btn.getAttribute('data-filter');
-                galleryItems.forEach(item => {
-                    if (filterValue === 'all' || item.classList.contains(filterValue)) {
-                        item.classList.remove('hide');
-                    } else {
-                        item.classList.add('hide');
-                    }
+        document.addEventListener('DOMContentLoaded', function() {
+            const btns = document.querySelectorAll('.filter-btn');
+            const items = document.querySelectorAll('.gallery-item');
+            btns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    btns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    const cat = this.getAttribute('data-filter');
+                    items.forEach(item => {
+                        if (cat === 'all' || item.classList.contains(cat)) {
+                            item.classList.remove('hide');
+                        } else {
+                            item.classList.add('hide');
+                        }
+                    });
                 });
             });
         });
