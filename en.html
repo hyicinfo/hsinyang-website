@@ -17,7 +17,7 @@
         body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-dark); color: var(--text-main); line-height: 1.6; scroll-behavior: smooth; }
 
         header { background-color: rgba(11, 17, 32, 0.95); padding: 15px 50px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #334155; position: sticky; top: 0; z-index: 100; }
-        .logo img { height: 50px; width: auto; background-color: #ffffff; padding: 5px 15px; border-radius: 5px; }
+        .logo img { height: 65px; width: auto; background-color: transparent; display: block; filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.2)); }
         nav a { color: var(--text-main); text-decoration: none; margin-left: 30px; font-size: 1rem; transition: color 0.3s; }
         nav a:hover { color: var(--accent-primary); }
         .lang-switch { border: 1px solid var(--accent-primary); padding: 5px 12px; border-radius: 20px; color: var(--accent-primary) !important; font-weight: bold; }
@@ -48,26 +48,10 @@
 
         .gallery-item.full-width { grid-column: 1 / -1; }
         .gallery-item.full-width img { height: auto; object-fit: contain; }
-        .gallery-item.full-width:hover img { transform: none; } 
 
         .achievement-list { list-style: none; padding: 0; }
-        .achievement-list li { 
-            background-color: var(--bg-card); 
-            margin-bottom: 15px; 
-            padding: 20px 30px; 
-            border-left: 4px solid var(--accent-secondary); 
-            border-radius: 0 5px 5px 0; 
-            display: flex; 
-            align-items: center;
-        }
-        .achievement-year { 
-            font-weight: bold; 
-            color: var(--accent-secondary); 
-            margin-right: 30px; 
-            font-size: 1.1rem; 
-            min-width: 140px; 
-            flex-shrink: 0;
-        }
+        .achievement-list li { background-color: var(--bg-card); margin-bottom: 15px; padding: 20px 30px; border-left: 4px solid var(--accent-secondary); border-radius: 0 5px 5px 0; display: flex; align-items: center; }
+        .achievement-year { font-weight: bold; color: var(--accent-secondary); margin-right: 30px; font-size: 1.1rem; min-width: 140px; flex-shrink: 0; }
 
         .contact-box { background-color: var(--bg-card); padding: 40px; border-radius: 10px; text-align: center; border: 1px solid #334155; }
         .contact-box a { color: var(--accent-primary); text-decoration: none; font-weight: bold; }
@@ -77,7 +61,7 @@
 <body>
 
     <header>
-        <div class="logo"><img src="images/logo.jpg" alt="HsinYang Intelligent Logo"></div>
+        <div class="logo"><img src="images/HyicLogo4.png" alt="HsinYang New Logo"></div>
         <nav>
             <a href="#about">About</a>
             <a href="#expertise">Core Tech</a>
@@ -90,23 +74,23 @@
 
     <section id="about" class="hero">
         <h1>Nearly 35 Years of Electromechanical Expertise, Pioneering AI Smart Automation</h1>
-        <p>Inheriting the profound technological foundation of Hsin Yang Technology Corp. established in 1992, HsinYang Intelligent focuses on advanced process equipment, Industry 4.0 system integration, and custom patented equipment. We provide the most reliable automation solutions for global technology leaders.</p>
+        <p>Inheriting the profound technological foundation of Hsin Yang Technology Corp. established in 1992, HsinYang Intelligent focuses on semiconductor process equipment and Industry 4.0 integration.</p>
     </section>
 
     <section id="expertise" class="section-container">
         <h2 class="section-title">Core Technologies & Services</h2>
         <div class="grid-3">
             <div class="card">
-                <h3>Advanced Process Equipment</h3>
-                <p>Specializing in electrical control and software for high-end equipment. Covering advanced heating and wet process automation, and controller development using embedded systems.</p>
+                <h3>Semiconductor Process Equipment</h3>
+                <p>Specializing in electrical control and software for high-end equipment. Covering semiconductor heating and wet process equipment.</p>
             </div>
             <div class="card" style="border-top-color: var(--accent-secondary);">
                 <h3>Complete Factory Robot Systems</h3>
-                <p>Expertise in major global robot brands. Offering one-stop automation from 3D simulation and mechanical design to electrical assembly and commissioning.</p>
+                <p>Expertise in major robot brands. Offering one-stop automation from 3D simulation to commissioning.</p>
             </div>
             <div class="card">
                 <h3>Patented & Custom Equipment</h3>
-                <p>Holding multiple multinational patents with independent R&D capabilities. We build high-yield, stable custom production equipment for specialized processes.</p>
+                <p>Holding multiple multinational patents with independent R&D capabilities for specialized processes.</p>
             </div>
         </div>
     </section>
@@ -120,73 +104,27 @@
             <button class="filter-btn" data-filter="sys">Systems & Patents</button>
         </div>
         <div class="gallery-grid">
-            <div class="gallery-item metal">
-                <img src="images/auto-welding.png" alt="Auto Welding">
-                <div class="gallery-caption">Multi-arm Collaborative Automated Welding for Auto Body Lines</div>
-            </div>
-            <div class="gallery-item metal">
-                <img src="images/metal-deburring.png" alt="Dual-arm Deburring">
-                <div class="gallery-caption">High-precision Dual-arm Deburring for Aluminum Die Castings</div>
-            </div>
-            <div class="gallery-item metal">
-                <img src="images/metal-polishing.jpg" alt="Metal Polishing">
-                <div class="gallery-caption">Complex Surface Polishing for High-gloss Stainless Steel</div>
-            </div>
-            <div class="gallery-item metal">
-                <img src="images/waterjet-robot.jpg" alt="Waterjet Handling">
-                <div class="gallery-caption">Automated Waterjet Cutting & Handling Integration for Large Plates</div>
-            </div>
-            <div class="gallery-item pack">
-                <img src="images/palletizing-box.jpg" alt="Palletizing">
-                <div class="gallery-caption">Fully Automated Carton Array Palletizing System</div>
-            </div>
-            <div class="gallery-item pack">
-                <img src="images/pack-drinks.png" alt="Case Packing">
-                <div class="gallery-caption">Food-grade High-speed Case Packing for Cup Drinks</div>
-            </div>
-            <div class="gallery-item sys">
-                <img src="images/system-punch-press.jpg" alt="Punch Press">
-                <div class="gallery-caption">Patent: High-speed Punch Press Automated Receiving Equipment</div>
-            </div>
-            <div class="gallery-item sys">
-                <img src="images/system-glazing.jpg" alt="Glazing Robot">
-                <div class="gallery-caption">Precision Glazing Automation for International Sanitary Ware Brands</div>
-            </div>
-            <div class="gallery-item sys">
-                <img src="images/system-Rivetless-Joining-A.png" alt="Rivetless Line">
-                <div class="gallery-caption">Smart Factory: Rivetless Joining Machine Shell Line A</div>
-            </div>
-            <div class="gallery-item full-width sys">
-                <img src="images/system-agv-line.png" alt="AGV Integration">
-                <div class="gallery-caption">Smart Factory: Rivetless Joining & AGV Line Integration</div>
-            </div>
+            <div class="gallery-item metal"><img src="images/auto-welding.png" alt="Auto Welding"><div class="gallery-caption">Collaborative Automated Welding for Auto Body Lines</div></div>
+            <div class="gallery-item metal"><img src="images/metal-deburring.png" alt="Deburring"><div class="gallery-caption">High-precision Dual-arm Deburring for Aluminum Die Castings</div></div>
+            <div class="gallery-item metal"><img src="images/metal-polishing.jpg" alt="Metal Polishing"><div class="gallery-caption">Complex Surface Polishing for High-gloss Stainless Steel</div></div>
+            <div class="gallery-item metal"><img src="images/waterjet-robot.jpg" alt="Waterjet Handling"><div class="gallery-caption">Automated Waterjet Cutting & Handling for Large Plates</div></div>
+            <div class="gallery-item pack"><img src="images/pack-drinks.png" alt="Case Packing"><div class="gallery-caption">Food-grade High-speed Case Packing for Cup Drinks</div></div>
+            <div class="gallery-item sys"><img src="images/system-punch-press.jpg" alt="Punch Press"><div class="gallery-caption">Patent: High-speed Punch Press Automated Receiving Equipment</div></div>
+            <div class="gallery-item sys"><img src="images/system-glazing.jpg" alt="Glazing Robot"><div class="gallery-caption">Precision Glazing Automation for International Brands</div></div>
+            <div class="gallery-item sys"><img src="images/system-Rivetless-Joining-A.png" alt="Rivetless Line"><div class="gallery-caption">Smart Factory: Rivetless Joining Machine Shell Line A</div></div>
+            <div class="gallery-item full-width sys"><img src="images/system-agv-line.png" alt="AGV Integration"><div class="gallery-caption">Smart Factory: Rivetless Joining & AGV Line Integration</div></div>
         </div>
     </section>
 
     <section id="portfolio" class="section-container">
         <h2 class="section-title">Key Industry Track Record</h2>
-        <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">For nearly 35 years, we have assisted numerous multinational corporations in critical production line upgrades.</p>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px;">For nearly 35 years, we have assisted multinational corporations in critical upgrades.</p>
         <ul class="achievement-list">
-            <li>
-                <span class="achievement-year">Semiconductor</span>
-                <div>Led electrical control system development for advanced heating and wet process equipment, and IC back-end packaging automation planning.</div>
-            </li>
-            <li>
-                <span class="achievement-year">Optoelectronics</span>
-                <div>Built automated cassette transport, packing/unpacking systems, and ultrasonic suspension handling for panel leaders; also established core automation lines for world-renowned CRT manufacturers in the early era.</div>
-            </li>
-            <li>
-                <span class="achievement-year">Automotive</span>
-                <div>Integrated multi-generational robotic welding systems for global carmakers, including roof plasma welding and engine bay studding.</div>
-            </li>
-            <li>
-                <span class="achievement-year">Electronics</span>
-                <div>Established large-scale rivetless joining and robotic production lines for the world's largest EMS groups.</div>
-            </li>
-            <li>
-                <span class="achievement-year">Industrial</span>
-                <div>Developed automated glazing robots for top sanitary brands, and palletizing/packing systems for global food & beverage groups.</div>
-            </li>
+            <li><span class="achievement-year">Semiconductor</span><div>Led electrical control system development for semiconductor heating and wet process equipment.</div></li>
+            <li><span class="achievement-year">Optoelectronics</span><div>Built automated transport systems for panel leaders and early era CRT manufacturers.</div></li>
+            <li><span class="achievement-year">Automotive</span><div>Integrated multi-generational robotic welding systems for global carmakers.</div></li>
+            <li><span class="achievement-year">Electronics</span><div>Established large-scale robotic production lines for the world's largest EMS groups.</div></li>
+            <li><span class="achievement-year">Sanitary & Food</span><div>Developed automated glazing robots for top sanitary brands and array packing for beverage groups.</div></li>
         </ul>
     </section>
 
@@ -201,7 +139,6 @@
 
     <footer>
         <p>© 2026 HsinYang Intelligent Limited Company. All rights reserved.</p>
-        <p>Professional team inherited from Hsin Yang Technology Corp.</p>
     </footer>
 
     <script>
